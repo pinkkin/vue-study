@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img src="./assets/logo.png" alt="logo">
+    <SchoolComponent userName="cqq" v-bind:list="list"></SchoolComponent>
+    <StudentComponent></StudentComponent>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
+//引入组件 es6
+  import SchoolComponent from './components/School'
+  import StudentComponent from './components/Student'
+  export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+        list: ['哈哈','嘻嘻']
+      }
+    },
+    components: {
+      SchoolComponent,
+      StudentComponent
+    }
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

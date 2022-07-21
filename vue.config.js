@@ -1,4 +1,9 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+//const { defineConfig } = require('@vue/cli-service')
+module.exports = {
+  pages: {
+    index: {
+      entry: 'src/main.js',
+    },
+  },
+  // lintOnSave: false  //关闭语法检查
+}
